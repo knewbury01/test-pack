@@ -1,0 +1,7 @@
+name: "Default Test CodeQL config"
+
+disable-default-queries: true
+
+packs:
+  java:
+    - knewbury01/pack-publish-test
