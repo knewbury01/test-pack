@@ -6,6 +6,8 @@
 
 import java
 
+extensible predicate namePred(string name);
+
 from MethodCall c 
-where c.getMethod().getName() = "readLine"
+where namePred(c.getMethod().getName())
 select c, "Sample pack"
