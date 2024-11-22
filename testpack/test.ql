@@ -9,5 +9,9 @@ import java
 extensible predicate namePred(string name);
 
 from MethodCall c 
-where namePred(c.getMethod().getName())
+where 
+if not namePred("default") then
+namePred(c.getMethod().getName())
+else
+c.getMethod().getName() = "readLine"
 select c, "Sample pack"
